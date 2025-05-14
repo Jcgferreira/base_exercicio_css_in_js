@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const VagaLi = styled.li`
+export const Vaga = styled.div`
   border: 1px solid var(--cor-principal);
   background-color: var(--cor-secundaria);
   color: var(--cor-principal);
@@ -20,14 +20,12 @@ const VagaLi = styled.li`
   }
 `
 
-const VagaTitulo = styled.h3`
+export const VagaTitulo = styled.h2`
   font-weight: bold;
   margin-bottom: 16px;
 `
 
-const VagaLink = styled.a.attrs({})<
-  React.AnchorHTMLAttributes<HTMLAnchorElement>
->`
+export const VagaLink = styled.a`
   border-color: var(--cor-secundaria);
   background-color: var(--cor-principal);
   color: var(--cor-secundaria);
@@ -44,31 +42,3 @@ const VagaLink = styled.a.attrs({})<
     display: block;
   }
 `
-
-type Props = {
-  titulo: string
-  localizacao: string
-  nivel: string
-  modalidade: string
-  salarioMin: number
-  salarioMax: number
-  requisitos: string[]
-}
-
-const Vaga = (props: Props) => (
-  <VagaLi>
-    <VagaTitulo>{props.titulo}</VagaTitulo>
-    <ul>
-      <li>Localização: {props.localizacao}</li>
-      <li>Senioridade: {props.nivel}</li>
-      <li>Tipo de contratação: {props.modalidade}</li>
-      <li>
-        Salário: {props.salarioMin} - {props.salarioMax}
-      </li>
-      <li>Requisitos: {props.requisitos.join(', ')}</li>
-    </ul>
-    <VagaLink href="#">Ver detalhes e candidatar-se</VagaLink>
-  </VagaLi>
-)
-
-export default Vaga
