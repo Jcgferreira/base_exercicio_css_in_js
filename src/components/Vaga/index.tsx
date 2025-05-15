@@ -1,21 +1,21 @@
 import styled from 'styled-components'
 
 const VagaLi = styled.li`
-  border: 1px solid var(--cor-principal);
-  background-color: var(--cor-secundaria);
-  color: var(--cor-principal);
+  border: 1px solid ${({ theme }) => theme.corPrincipal};
+  background-color: ${({ theme }) => theme.corSecundaria};
+  color: ${({ theme }) => theme.corPrincipal};
   padding: 16px;
   transition: all ease 0.3s;
   border-radius: 8px;
 
   &:hover {
-    background-color: var(--cor-principal);
-    color: var(--cor-secundaria);
+    background-color: ${({ theme }) => theme.corPrincipal};
+    color: ${({ theme }) => theme.corSecundaria};
 
     a {
-      border-color: var(--cor-principal);
-      background-color: var(--cor-secundaria);
-      color: var(--cor-principal);
+      border-color: ${({ theme }) => theme.corPrincipal};
+      background-color: ${({ theme }) => theme.corSecundaria};
+      color: ${({ theme }) => theme.corPrincipal};
     }
   }
 `
@@ -28,9 +28,9 @@ const VagaTitulo = styled.h3`
 const VagaLink = styled.a.attrs({})<
   React.AnchorHTMLAttributes<HTMLAnchorElement>
 >`
-  border-color: var(--cor-secundaria);
-  background-color: var(--cor-principal);
-  color: var(--cor-secundaria);
+  border-color: ${({ theme }) => theme.corSecundaria};
+  background-color: ${({ theme }) => theme.corSecundaria};
+  color: ${({ theme }) => theme.corSecundaria};
   display: inline-block;
   padding: 8px 16px;
   text-decoration: none;

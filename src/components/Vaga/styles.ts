@@ -1,21 +1,21 @@
 import styled from 'styled-components'
 
 export const Vaga = styled.div`
-  border: 1px solid var(--cor-principal);
-  background-color: var(--cor-secundaria);
+  border: 1px solid var ${({ theme }) => theme.corPrincipal};
+  background-color: var ${({ theme }) => theme.corSecundaria};
   color: var(--cor-principal);
   padding: 16px;
   transition: all ease 0.3s;
   border-radius: 8px;
 
   &:hover {
-    background-color: var(--cor-principal);
-    color: var(--cor-secundaria);
+    background-color: ${({ theme }) => theme.corPrincipal};
+    color: var ${({ theme }) => theme.corSecundaria};
 
     a {
-      border-color: var(--cor-principal);
-      background-color: var(--cor-secundaria);
-      color: var(--cor-principal);
+      border-color: ${({ theme }) => theme.corPrincipal};
+      background-color: var ${({ theme }) => theme.corSecundaria};
+      color: ${({ theme }) => theme.corPrincipal};
     }
   }
 `
@@ -26,9 +26,9 @@ export const VagaTitulo = styled.h2`
 `
 
 export const VagaLink = styled.a`
-  border-color: var(--cor-secundaria);
-  background-color: var(--cor-principal);
-  color: var(--cor-secundaria);
+  border-color: ${({ theme }) => theme.corSecundaria};
+  background-color: ${({ theme }) => theme.corPrincipal};
+  color: var ${({ theme }) => theme.corSecundaria};
   display: inline-block;
   padding: 8px 16px;
   text-decoration: none;

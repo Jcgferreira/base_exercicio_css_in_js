@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const GlobalStyle = createGlobalStyle`
@@ -15,7 +15,11 @@ body {
   padding-bottom: 120px;
 }
 
-.container {
+
+`
+export default GlobalStyle
+
+export const Container = styled.div`
   max-width: 1024px;
   width: 100%;
   margin: 0 auto;
@@ -23,7 +27,4 @@ body {
   @media (max-width: 1024px) {
     max-width: 80%;
   }
-}
-
 `
-export default GlobalStyle
