@@ -11,12 +11,10 @@ function App() {
   return (
     <ThemeProvider theme={tema}>
       <GlobalStyle />
+      <Header />
+      <Hero />
       <Container>
-        <Header />
-        <Hero />
-        <div className="container">
-          <ListaVagas />
-        </div>
+        <ListaVagas />
       </Container>
     </ThemeProvider>
   )

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import FormVagas from '../../components/FormVagas'
 import Vaga from '../../components/Vaga'
+import { VagasContainer } from './ListaVaga' // Importação correta
 
 type VagaProps = {
   id: string
@@ -89,14 +90,14 @@ const vagas: VagaProps[] = [
 const ListaVagas = () => {
   const [filtro, setFiltro] = useState<string>('')
 
-  const vagasFiltradas = vagas.filter(
-    (vaga) => vaga.titulo.toLowerCase().includes(filtro.toLowerCase()) // Modificado para "includes" que é mais direto
+  const vagasFiltradas = vagas.filter((vaga) =>
+    vaga.titulo.toLowerCase().includes(filtro.toLowerCase())
   )
 
   return (
     <div>
       <FormVagas aoPesquisar={(termo: string) => setFiltro(termo)} />
-      <ul>
+      <VagasContainer as="ul">
         {vagasFiltradas.map((vaga) => (
           <Vaga
             key={vaga.id}
@@ -109,7 +110,7 @@ const ListaVagas = () => {
             requisitos={vaga.requisitos}
           />
         ))}
-      </ul>
+      </VagasContainer>
     </div>
   )
 }

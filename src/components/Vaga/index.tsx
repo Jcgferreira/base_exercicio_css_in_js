@@ -29,7 +29,7 @@ const VagaLink = styled.a.attrs({})<
   React.AnchorHTMLAttributes<HTMLAnchorElement>
 >`
   border-color: ${({ theme }) => theme.corSecundaria};
-  background-color: ${({ theme }) => theme.corSecundaria};
+  background-color: ${({ theme }) => theme.corPrincipal};
   color: ${({ theme }) => theme.corSecundaria};
   display: inline-block;
   padding: 8px 16px;

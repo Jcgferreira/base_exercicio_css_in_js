@@ -24,12 +24,10 @@ const FormVagas = ({ aoPesquisar }: Props) => {
   return (
     <StyledForm onSubmit={aoEnviarForm}>
       <Input
-        placeholder="Front-end, fullstack, node, design"
+        type="text"
+        placeholder="Pesquisar vagas..."
         value={termo}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setTermo(e.target.value)
-        }
-        type="search"
+        onChange={(e) => setTermo(e.target.value)}
       />
       <BtnPesquisar type="submit">Pesquisar</BtnPesquisar>
     </StyledForm>
